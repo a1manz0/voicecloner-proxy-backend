@@ -3,6 +3,7 @@ services:
   tts-backend:
     build: .
     container_name: tts-backend
+    image: tts-proxy-backend
     env_file: 
       - .env
     ports:
