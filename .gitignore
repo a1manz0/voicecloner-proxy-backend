@@ -1,0 +1,52 @@
+# Игнорировать кэш и временные файлы Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Игнорировать виртуальное окружение
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Игнорировать папку hf_cache целиком
+hf_cache/
+models/
+out/
+tuna-config/tuna.yml
+refs/*/
+
+# Логи и файлы настроек
+*.log
+*.pot
+*.mo
+*.session
+
+# Игнорировать настройки IDE (если нужны, можно удалить ненужные)
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter и IPython
+.ipynb_checkpoints/
+profile_default/
+
+# Файлы сборки, дистрибутивы
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Кеши тестов и покрытия
+.tox/
+.coverage
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Прочие
+.DS_Store
+Thumbs.db

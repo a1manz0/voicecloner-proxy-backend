@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  tts-backend:
+    build: .
+    container_name: tts-backend
+    env_file: 
+      - .env
+    ports:
+      - "${HOST_PORT:-8000}:8000"
+    restart: unless-stopped
+    # option: bind a host dir to inspect logs / tmp if needed
+    volumes:
+      - ./tmp:/tmp
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/docs || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
